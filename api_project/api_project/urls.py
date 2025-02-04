@@ -24,6 +24,13 @@ router = DefaultRouter()
 router.register(r'records', RecordViewSet)
 
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),  # Register API routes
+]
+
+from records.views import home
+
+urlpatterns += [
+    path('', home, name='home'),
 ]

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Records Table</title>
+</head>
+<body>
+    <h2>Records</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Institution</th>
+            <th>Specialization</th>
+            <th>Date</th>
+            <th>Paid</th>
+            <th>Provider</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{ record.name }}</td>
+            <td>{{ record.type_of_document }}</td>
+            <td>{{ record.institution }}</td>
+            <td>{{ record.specialization }}</td>
+            <td>{{ record.date }}</td>
+            <td>{{ record.paid }}</td>
+            <td>{{ record.provider }}</td>
+            <td>{{ record.description }}</td>
+            <td><a href="/media/{{ record.image_id }}">View PDF</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

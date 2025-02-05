@@ -29,7 +29,15 @@
             <td>{{ record.paid }}</td>
             <td>{{ record.provider }}</td>
             <td>{{ record.description }}</td>
-            <td><a href="/media/{{ record.image_id }}">View PDF</a></td>
+            <td>
+                {% if record.thumbnail %}
+                    <a href="/media/{{ record.image_id }}" target="_blank">
+                       <img src="/media/{{ record.thumbnail }}" width="50" height="50" alt="Thumbnail">
+                    </a>
+                {% else %}
+                    <a href="/media/{{ record.image_id }}">View PDF</a>
+                {% endif %}
+            </td>
         </tr>
         {% endfor %}
     </table>

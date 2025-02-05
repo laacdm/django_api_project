@@ -1,5 +1,5 @@
 [
-    {   
+    {
         "model": "records.record",
         "pk": 1,
         "fields": {
@@ -14,7 +14,7 @@
             "image_id": "IMG0001.pdf"
         }
     },
-    {   
+    {
         "model": "records.record",
         "pk": 2,
         "fields": {
@@ -29,7 +29,7 @@
             "image_id": "IMG0002.pdf"
         }
     },
-    {   
+    {
         "model": "records.record",
         "pk": 3,
         "fields": {
@@ -59,7 +59,7 @@
             "image_id": "IMG0004.pdf"
         }
     },
-    {   
+    {
         "model": "records.record",
         "pk": 5,
         "fields": {
@@ -74,7 +74,7 @@
             "image_id": "IMG0005.pdf"
         }
     },
-    {   
+    {
         "model": "records.record",
         "pk": 6,
         "fields": {
@@ -1317,7 +1317,7 @@
             "paid": "Yes",
             "provider": "EdX",
             "description": "Static checking, code review, testing, specifications, designing Specifications, avoiding debugging, mutability and immutability, debugging, abstract data types, abstraction functions and rep invariants, interfaces, equality.",
-            "image_id": "IMG00088.pdf"
+            "image_id": "IMG0088.pdf"
         }
     },
     {

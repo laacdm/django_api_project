@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +26,10 @@ SECRET_KEY = "django-insecure-w$presf$&!j4y06r64yy5!=hjuz2!88r%uxgkn4gy%#kjhdd45
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+		'laacdm.pythonanywhere.com',  # Add your PythonAnywhere domain
+    		'127.0.0.1',  # Allow localhost for testing
+]
 
 # Application definition
 
@@ -56,7 +59,9 @@ ROOT_URLCONF = "api_project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+		os.path.join(BASE_DIR, 'api_project', 'templates'),
+	], # Fixing path
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -123,3 +128,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join('/home/laacdm/django_api_project/', 'media')

@@ -36,26 +36,47 @@
             height: 80px;
             object-fit: cover;
         }
+        .quote {
+            font-size: 0.9rem;  /* Smaller font size */
+            font-style: italic; /* Italics */
+            text-align: center; /* Center alignment */
+            margin-top: -10px;  /* Adjust spacing */
+            margin-bottom: 20px; /* Adjust spacing */
+        }
+        /* Custom CSS for centering the title */
+        .title-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
     <div class="container mt-4">
-        <h2 class="text-center mb-4">Luis A. Alaniz Castillo Academic Curriculum</h2>
+        <!-- Centered Title -->
+        <div class="row title-container">
+            <div class="col-12">
+                <h2 class="mb-4">Luis A. Alaniz Castillo Academic Curriculum</h2>
+                <p class="quote">"Learning is an ornament in prosperity, a refuge in adversity, and a provision in old age." - Aristotle</p>
+
+            </div>
+        </div>
 
         <!-- Table -->
         <table class="table table-hover table-bordered">
             <thead class="table-dark">
                 <tr>
-                    <th class="col-name">Name</th>
-                    <th class="col-type">Type</th>
-                    <th class="col-inst">Institution</th>
-                    <th class="col-spec">Specialization</th>
-                    <th class="col-date">Date</th>
-                    <th class="col-paid">Paid</th>
-                    <th class="col-prov">Provider</th>
-                    <th class="col-desc">Description</th>
-                    <th>Image</th>
+                    <th class="col-name text-center">Award Name</th>
+                    <th class="col-type text-center">Type of Document</th>
+                    <th class="col-inst text-center">Awarding Institution</th>
+                    <th class="col-spec text-center">Specialization</th>
+                    <th class="col-date text-center">Date</th>
+                    <th class="col-paid text-center">Paid</th>
+                    <th class="col-prov text-center">Provider</th>
+                    <th class="col-desc text-center">Description</th>
+                    <th class="text-center">Image</th>
                 </tr>
             </thead>
             <tbody>

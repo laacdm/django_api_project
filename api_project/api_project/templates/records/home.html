@@ -1,45 +1,106 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Records Table</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            margin: 20px;  /* More pleasant margins */
+        }
+        .container {
+            max-width: 95%;  /* Better spacing for content */
+        }
+        .table th {
+            font-size: 1.1rem; /* Higher font size for column titles */
+        }
+        .table td {
+            font-size: 0.8rem;  /* ✅ Smaller font size for table data */
+        }
+        .col-name { width: 13%; }      /* More space for Name */
+        .col-type { width: 7%; }
+        .col-inst { width: 13%; }      /* More space for Institution */
+        .col-spec { width: 8%; }
+        .col-date { width: 8%; }      /* More space for Date */
+        .col-paid { width: 8%; }
+        .col-prov { width: 11%; }      /* More space for Provider */
+        .col-desc { width: 40%; }      /* Less space for Description */
+        .thumbnail img {
+            width: 100px;
+            height: 80px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-    <h2>Records</h2>
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Institution</th>
-            <th>Specialization</th>
-            <th>Date</th>
-            <th>Paid</th>
-            <th>Provider</th>
-            <th>Description</th>
-            <th>Image</th>
-        </tr>
-        {% for record in records %}
-        <tr>
-            <td>{{ record.name }}</td>
-            <td>{{ record.type_of_document }}</td>
-            <td>{{ record.institution }}</td>
-            <td>{{ record.specialization }}</td>
-            <td>{{ record.date }}</td>
-            <td>{{ record.paid }}</td>
-            <td>{{ record.provider }}</td>
-            <td>{{ record.description }}</td>
-            <td>
-                {% if record.thumbnail %}
-                    <a href="/media/{{ record.image_id }}" target="_blank">
-                       <img src="/media/{{ record.thumbnail }}" width="50" height="50" alt="Thumbnail">
-                    </a>
-                {% else %}
-                    <a href="/media/{{ record.image_id }}">View PDF</a>
+
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Luis A. Alaniz Castillo Academic Curriculum</h2>
+
+        <!-- Table -->
+        <table class="table table-hover table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th class="col-name">Name</th>
+                    <th class="col-type">Type</th>
+                    <th class="col-inst">Institution</th>
+                    <th class="col-spec">Specialization</th>
+                    <th class="col-date">Date</th>
+                    <th class="col-paid">Paid</th>
+                    <th class="col-prov">Provider</th>
+                    <th class="col-desc">Description</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in page_obj %}
+                <tr>
+                    <td>{{ record.name }}</td>
+                    <td>{{ record.type_of_document }}</td>
+                    <td>{{ record.institution }}</td>
+                    <td>{{ record.specialization }}</td>
+                    <td>{{ record.date }}</td>
+                    <td>{{ record.paid }}</td>
+                    <td>{{ record.provider }}</td>
+                    <td>{{ record.description }}</td>
+                    <td class="thumbnail">
+                        {% if record.thumbnail %}
+                            <a href="/media/{{ record.image_id }}" target="_blank">
+                                <img src="/media/{{ record.thumbnail }}" class="rounded">
+                            </a>
+                        {% else %}
+                            <a href="/media/{{ record.image_id }}">View PDF</a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <nav>
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page=1">&laquo; First</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
                 {% endif %}
-            </td>
-        </tr>
-        {% endfor %}
-    </table>
+                <li class="page-item disabled"><a class="page-link">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</a></li>
+                {% if page_obj.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
 </body>
 </html>

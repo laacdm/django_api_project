@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "name": "Bayesian Statistics",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "Duke University",
             "specialization": "No",
             "date": "2018-10-01",
@@ -19,7 +19,7 @@
         "pk": 2,
         "fields": {
             "name": "Bayesian Statistics: From Concept to Data Analysis",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "UC Santa Cruz",
             "specialization": "No",
             "date": "2024-07-01",
@@ -34,7 +34,7 @@
         "pk": 3,
         "fields": {
             "name": "Bayesian Statistics: Techniques and Models",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "UC Santa Cruz",
             "specialization": "No",
             "date": "2018-12-01",
@@ -49,7 +49,7 @@
         "pk": 4,
         "fields": {
             "name": "The UNIX Workbench",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "John Hopkins University",
             "specialization": "No",
             "date": "2018-12-01",
@@ -64,7 +64,7 @@
         "pk": 5,
         "fields": {
             "name": "Supervised Machine Learning: Regression and Classification",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "Stanford University",
             "specialization": "No",
             "date": "2022-06-01",
@@ -79,7 +79,7 @@
         "pk": 6,
         "fields": {
             "name": "Advanced Learning Algorithms",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "Stanford University",
             "specialization": "No",
             "date": "2022-06-01",
@@ -94,7 +94,7 @@
         "pk": 7,
         "fields": {
             "name": "Unsupervised Learning, Recommenders, Reinforcement Learning",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "Stanford University",
             "specialization": "No",
             "date": "2022-07-01",
@@ -124,7 +124,7 @@
         "pk": 9,
         "fields": {
             "name": "Introduction to Generative AI for Software Development",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI",
             "specialization": "No",
             "date": "2025-01-01",
@@ -154,7 +154,7 @@
         "pk": 11,
         "fields": {
             "name": "Introduction to Data Engineering",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI / AWS",
             "specialization": "No",
             "date": "2024-09-01",
@@ -169,7 +169,7 @@
         "pk": 12,
         "fields": {
             "name": "Source Systems, Data Ingestion, and Pipelines",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI / AWS",
             "specialization": "No",
             "date": "2024-12-01",
@@ -184,7 +184,7 @@
         "pk": 13,
         "fields": {
             "name": "Data Storage and Queries",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI / AWS",
             "specialization": "No",
             "date": "2024-12-01",
@@ -199,7 +199,7 @@
         "pk": 14,
         "fields": {
             "name": "Data Modeling, Transformation, and Serving",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI / AWS",
             "specialization": "No",
             "date": "2025-01-01",
@@ -214,7 +214,7 @@
         "pk": 15,
         "fields": {
             "name": "Neural Networks and Deep Learning",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI",
             "specialization": "No",
             "date": "2018-02-01",
@@ -229,7 +229,7 @@
         "pk": 16,
         "fields": {
             "name": "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI",
             "specialization": "No",
             "date": "2018-02-01",
@@ -244,7 +244,7 @@
         "pk": 17,
         "fields": {
             "name": "Structuring Machine Learning Projects",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI",
             "specialization": "No",
             "date": "2018-07-01",
@@ -259,7 +259,7 @@
         "pk": 18,
         "fields": {
             "name": "Convolutional Neural Networks",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI",
             "specialization": "No",
             "date": "2018-07-01",
@@ -274,7 +274,7 @@
         "pk": 19,
         "fields": {
             "name": "Sequence Models",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI",
             "specialization": "No",
             "date": "2018-07-01",
@@ -304,7 +304,7 @@
         "pk": 21,
         "fields": {
             "name": "Natural Language Processing with Classification and Vector Spaces",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI",
             "specialization": "No",
             "date": "2020-04-01",
@@ -319,7 +319,7 @@
         "pk": 22,
         "fields": {
             "name": "Natural Language Processing with Classification with probabislic models",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI",
             "specialization": "No",
             "date": "2020-06-01",
@@ -334,7 +334,7 @@
         "pk": 23,
         "fields": {
             "name": "Natural Language Processing with Sequence Models",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI",
             "specialization": "No",
             "date": "2020-07-01",
@@ -349,7 +349,7 @@
         "pk": 24,
         "fields": {
             "name": "Natural Language Processing with Attention Models",
-            "type_of_document": "Certificate",
+            "type_of_document": "Certification",
             "institution": "DeepLearning.AI",
             "specialization": "No",
             "date": "2020-09-01",
@@ -514,7 +514,7 @@
         "pk": 35,
         "fields": {
             "name": "Reinforcement Learning",
-            "type_of_document": "Certification",
+            "type_of_document": "Specialization",
             "institution": "University of Alberta",
             "specialization": "Yes",
             "date": "2021-02-01",
@@ -678,8 +678,8 @@
         "model": "records.record",
         "pk": 46,
         "fields": {
-            "name": "Data Science Specialization",
-            "type_of_document": "Certification",
+            "name": "Data Science",
+            "type_of_document": "Specialization",
             "institution": "John Hopkins University",
             "specialization": "Yes",
             "date": "2018-10-01",
@@ -799,7 +799,7 @@
         "pk": 54,
         "fields": {
             "name": "TensorFlow: Advanced Techniques",
-            "type_of_document": "Certification",
+            "type_of_document": "Specialization",
             "institution": "DeepLearnig.AI",
             "specialization": "Yes",
             "date": "2021-01-01",
@@ -874,7 +874,7 @@
         "pk": 59,
         "fields": {
             "name": "PostgreSQL for Everybody",
-            "type_of_document": "Certification",
+            "type_of_document": "Specialization",
             "institution": "University of Michigan",
             "specialization": "Yes",
             "date": "2022-02-01",
@@ -949,7 +949,7 @@
         "pk": 64,
         "fields": {
             "name": "Machine Learning Engineering for Production (MLOps)",
-            "type_of_document": "Certification",
+            "type_of_document": "Specialization",
             "institution": "DeepLearning.AI",
             "specialization": "Yes",
             "date": "2021-09-01",
@@ -1024,7 +1024,7 @@
         "pk": 69,
         "fields": {
             "name": "Django for Everybody",
-            "type_of_document": "Certification",
+            "type_of_document": "Specialization",
             "institution": "University of Michigan",
             "specialization": "Yes",
             "date": "2021-08-01",
@@ -1099,7 +1099,7 @@
         "pk": 74,
         "fields": {
             "name": "Machine Learning and Reinforcement Learning in Finance",
-            "type_of_document": "Certification",
+            "type_of_document": "Specialization",
             "institution": "New York University, Tandon School of Engineering",
             "specialization": "Yes",
             "date": "2019-10-01",
@@ -1175,7 +1175,7 @@
         "pk": 79,
         "fields": {
             "name": "TensorFlow Developer",
-            "type_of_document": "Certification",
+            "type_of_document": "Specialization",
             "institution": "DeepLearning.AI",
             "specialization": "Yes",
             "date": "2021-05-01",
@@ -1250,7 +1250,7 @@
         "pk": 84,
         "fields": {
             "name": "Advanced Data Science with IBM",
-            "type_of_document": "Certification",
+            "type_of_document": "Specialization",
             "institution": "IBM",
             "specialization": "Yes",
             "date": "2021-02-01",

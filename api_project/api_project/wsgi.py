@@ -7,6 +7,10 @@ For more information on this file, see
 https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 """
 
+import mimetypes
+
+mimetypes.add_type("application/javascript", ".js", True)
+
 import os
 
 from django.core.wsgi import get_wsgi_application

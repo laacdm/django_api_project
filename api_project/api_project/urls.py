@@ -21,7 +21,7 @@ from rest_framework.routers import DefaultRouter
 from records.views import RecordViewSet
 
 router = DefaultRouter()
-router.register(r'records', RecordViewSet)
+router.register(r'records', RecordViewSet, basename='record')
 
 urlpatterns = [
     
@@ -38,6 +38,10 @@ urlpatterns += [
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += router.urls
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

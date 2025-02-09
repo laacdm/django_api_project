@@ -18,21 +18,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from records.views import RecordViewSet
+from records.views import RecordViewSet, home, about, register, user_login, user_logout, get_api_key
 
 router = DefaultRouter()
 router.register(r'records', RecordViewSet, basename='record')
 
 urlpatterns = [
-    
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),  # Register API routes
-]
-
-from records.views import home
-
-urlpatterns += [
     path('', home, name='home'),
+    path('about/', about, name='about'),  # ✅ Add About page URL
+    path('register/', register, name='register'),
+    path('login/', user_login, name='login'), # ✅ Add login page
+    path('logout/', user_logout, name='logout'),
+    path('get-api-key/', get_api_key, name='get_api_key'), # ✅ API Key Page
 ]
 
 from django.conf import settings
@@ -40,8 +39,4 @@ from django.conf.urls.static import static
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-urlpatterns += router.urls
-
-if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

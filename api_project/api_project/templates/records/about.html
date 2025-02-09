@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h2>About This Website</h2>
+        <p>Welcome to Luis' Web Site! This web application is built using Django.</p>
+
+        <h3>What is this website?</h3>
+        <p>This website provides an academic course curriculum and an API to access educational records.</p>
+
+        <h3>How to use the API?</h3>
+        <p>To use the API, you need an authentication token.</p>
+
+        <h4>Steps to Get Your API Key:</h4>
+        <ol>
+            <li>Register for an account.</li>
+            <li>Login to your account.</li>
+            <li>Navigate to the <strong>API Key</strong> page.</li>
+            <li>Copy your personal API token.</li>
+            <li>Use it in your API requests.</li>
+        </ol>
+
+        <h4>Example API Request Using cURL:</h4>
+        <pre><code>curl -H "Authorization: Token YOUR_API_KEY" https://laacdm.pythonanywhere.com/api/records/</code></pre>
+
+        <p>Only authenticated users can access the API.</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Your API Key{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Your API Key</h2>
+    <p><strong>Use this API Key to access records:</strong></p>
+    <code>{{ api_key }}</code>
+    <p>Keep it safe and do not share it with others.</p>
+</div>
+{% endblock %}

@@ -1,127 +1,63 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Records Table</title>
+{% extends 'base.html' %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+{% block title %}Course Curriculum - Luis' Web Site{% endblock %}
 
-    <!-- Custom CSS -->
-    <style>
-        body {
-            margin: 20px;  /* More pleasant margins */
-        }
-        .container {
-            max-width: 95%;  /* Better spacing for content */
-        }
-        .table th {
-            font-size: 1.1rem; /* Higher font size for column titles */
-        }
-        .table td {
-            font-size: 0.8rem;  /* ✅ Smaller font size for table data */
-        }
-        .col-name { width: 13%; }      /* More space for Name */
-        .col-type { width: 7%; }
-        .col-inst { width: 13%; }      /* More space for Institution */
-        .col-spec { width: 8%; }
-        .col-date { width: 8%; }      /* More space for Date */
-        .col-paid { width: 8%; }
-        .col-prov { width: 11%; }      /* More space for Provider */
-        .col-desc { width: 40%; }      /* Less space for Description */
-        .thumbnail img {
-            width: 100px;
-            height: 80px;
-            object-fit: cover;
-        }
-        .quote {
-            font-size: 0.9rem;  /* Smaller font size */
-            font-style: italic; /* Italics */
-            text-align: center; /* Center alignment */
-            margin-top: -10px;  /* Adjust spacing */
-            margin-bottom: 20px; /* Adjust spacing */
-        }
-        /* Custom CSS for centering the title */
-        .title-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
+{% block content %}
+<h2 class="text-center mb-4">Course Curriculum</h2>
 
-    <div class="container mt-4">
-        <!-- Centered Title -->
-        <div class="row title-container">
-            <div class="col-12">
-                <h2 class="mb-4">Luis A. Alaniz Castillo Academic Curriculum</h2>
-                <p class="quote">"Learning is an ornament in prosperity, a refuge in adversity, and a provision in old age." - Aristotle</p>
-
-            </div>
-        </div>
-
-        <!-- Table -->
-        <table class="table table-hover table-bordered">
-            <thead class="table-dark">
-                <tr>
-                    <th class="col-name text-center">Award Name</th>
-                    <th class="col-type text-center">Type of Document</th>
-                    <th class="col-inst text-center">Awarding Institution</th>
-                    <th class="col-spec text-center">Specialization</th>
-                    <th class="col-date text-center">Date</th>
-                    <th class="col-paid text-center">Paid</th>
-                    <th class="col-prov text-center">Provider</th>
-                    <th class="col-desc text-center">Description</th>
-                    <th class="text-center">Image</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for record in page_obj %}
-                <tr>
-                    <td>{{ record.name }}</td>
-                    <td>{{ record.type_of_document }}</td>
-                    <td>{{ record.institution }}</td>
-                    <td>{{ record.specialization }}</td>
-                    <td>{{ record.date }}</td>
-                    <td>{{ record.paid }}</td>
-                    <td>{{ record.provider }}</td>
-                    <td>{{ record.description }}</td>
-                    <td class="thumbnail">
-                        {% if record.thumbnail %}
-                            <a href="/media/{{ record.image_id }}" target="_blank">
-                                <img src="/media/{{ record.thumbnail }}" class="rounded">
-                            </a>
-                        {% else %}
-                            <a href="/media/{{ record.image_id }}">View PDF</a>
-                        {% endif %}
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-
-        <!-- Pagination -->
-        <nav>
-            <ul class="pagination justify-content-center">
-                {% if page_obj.has_previous %}
-                    <li class="page-item"><a class="page-link" href="?page=1">&laquo; First</a></li>
-                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+<!-- Table -->
+<table class="table table-hover table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Institution</th>
+            <th>Specialization</th>
+            <th>Date</th>
+            <th>Paid</th>
+            <th>Provider</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in page_obj %}
+        <tr>
+            <td>{{ record.name }}</td>
+            <td>{{ record.type_of_document }}</td>
+            <td>{{ record.institution }}</td>
+            <td>{{ record.specialization }}</td>
+            <td>{{ record.date }}</td>
+            <td>{{ record.paid }}</td>
+            <td>{{ record.provider }}</td>
+            <td>{{ record.description }}</td>
+            <td class="thumbnail">
+                {% if record.thumbnail %}
+                    <a href="/media/{{ record.image_id }}" target="_blank">
+                        <img src="/media/{{ record.thumbnail }}" class="rounded" width="80">
+                    </a>
+                {% else %}
+                    <a href="/media/{{ record.image_id }}">View PDF</a>
                 {% endif %}
-                <li class="page-item disabled"><a class="page-link">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</a></li>
-                {% if page_obj.has_next %}
-                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
-                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-    </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
-    <!-- Bootstrap JS -->
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<!-- Pagination -->
+<nav>
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+            <li class="page-item"><a class="page-link" href="?page=1">&laquo; First</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+        {% endif %}
+        <li class="page-item disabled"><a class="page-link">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</a></li>
+        {% if page_obj.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a></li>
+        {% endif %}
+    </ul>
+</nav>
 
-</body>
-</html>
+{% endblock %}

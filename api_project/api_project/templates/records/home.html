@@ -5,49 +5,51 @@
 {% block content %}
 <h2 class="text-center mb-4">Course Curriculum</h2>
 
-<!-- Table -->
-<table class="table table-hover table-bordered">
-    <thead class="table-dark">
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Institution</th>
-            <th>Specialization</th>
-            <th>Date</th>
-            <th>Paid</th>
-            <th>Provider</th>
-            <th>Description</th>
-            <th>Image</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for record in page_obj %}
-        <tr>
-            <td>{{ record.name }}</td>
-            <td>{{ record.type_of_document }}</td>
-            <td>{{ record.institution }}</td>
-            <td>{{ record.specialization }}</td>
-            <td>{{ record.date }}</td>
-            <td>{{ record.paid }}</td>
-            <td>{{ record.provider }}</td>
-            <td>{{ record.description }}</td>
-            <td class="thumbnail">
-                {% if record.thumbnail %}
-                    <a href="/media/{{ record.image_id }}" target="_blank">
-                        <img src="/media/{{ record.thumbnail }}" class="rounded" width="80">
-                    </a>
-                {% else %}
-                    <a href="/media/{{ record.image_id }}">View PDF</a>
-                {% endif %}
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<!-- ✅ Responsive Table Wrapper -->
+<div class="table-responsive">
+    <table class="table table-hover table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Institution</th>
+                <th>Specialization</th>
+                <th>Date</th>
+                <th>Paid</th>
+                <th>Provider</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in page_obj %}
+            <tr>
+                <td>{{ record.name }}</td>
+                <td>{{ record.type_of_document }}</td>
+                <td>{{ record.institution }}</td>
+                <td>{{ record.specialization }}</td>
+                <td>{{ record.date }}</td>
+                <td>{{ record.paid }}</td>
+                <td>{{ record.provider }}</td>
+                <td class="text-truncate" style="max-width: 150px;">{{ record.description }}</td>
+                <td class="thumbnail text-center">
+                    {% if record.thumbnail %}
+                        <a href="/media/{{ record.image_id }}" target="_blank">
+                            <img src="/media/{{ record.thumbnail }}" class="rounded img-fluid" style="max-width: 80px;">
+                        </a>
+                    {% else %}
+                        <a href="/media/{{ record.image_id }}">View PDF</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 
-<!-- Pagination -->
+<!-- ✅ Pagination (Mobile-Friendly) -->
 <nav>
-    <ul class="pagination justify-content-center">
+    <ul class="pagination pagination-sm justify-content-center">
         {% if page_obj.has_previous %}
             <li class="page-item"><a class="page-link" href="?page=1">&laquo; First</a></li>
             <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>

@@ -1,8 +1,8 @@
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
-from .models import Record
-from .serializers import RecordSerializer
+from .models import Record, Recognition
+from .serializers import RecordSerializer,  RecognitionSerializer
 
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
@@ -28,6 +28,21 @@ def home(request):
     # ✅ Pass `page_obj` to template
     return render(request, 'records/home.html', {'page_obj': page_obj})
 
+# ✅ Recognitions View with Pagination and Sorting
+def recognitions_page(request):
+    # Define a custom sorting order for the 'type_of_recognition' field
+    recognition_order = {'Alpha Tester, Top Contributor': 1, 'Alpha Tester, Participating Alpha Tester': 2, 'Participating Mentor': 3, 'Credly Badge': 4}
+    
+    # Fetch and sort recognitions
+    recognitions = Recognition.objects.all().order_by('-date')
+    sorted_recognitions = sorted(recognitions, key=lambda r: (recognition_order.get(r.type_of_recognition, 5), -r.date.toordinal()))
+    
+    # Apply pagination to sorted recognitions
+    paginator = Paginator(sorted_recognitions, 10)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    return render(request, 'records/recognitions.html', {'page_obj': page_obj})
 
 # ✅ User Registration View
 def register(request):
@@ -80,3 +95,9 @@ class RecordViewSet(viewsets.ModelViewSet):
     serializer_class = RecordSerializer
     authentication_classes = [TokenAuthentication]  # Explicitly set token authentication
     permission_classes = [IsAuthenticated]  # Require authentication
+
+class RecognitionViewSet(viewsets.ModelViewSet):
+    queryset = Recognition.objects.all()
+    serializer_class = RecognitionSerializer
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]

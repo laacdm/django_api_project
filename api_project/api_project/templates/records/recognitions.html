@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Recognitions - Luis' Web Site{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4">Recognitions</h2>
+
+<table class="table table-hover table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Institution</th>
+            <th>Date</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for recognition in page_obj %}
+        <tr>
+            <td>{{ recognition.name }}</td>
+            <td>{{ recognition.type_of_recognition }}</td>
+            <td>{{ recognition.institution }}</td>
+            <td>{{ recognition.date }}</td>
+            <td class="thumbnail">
+                {% if recognition.thumbnail %}
+                    <a href="/media/{{ recognition.image_id }}" target="_blank">
+                        <img src="/media/{{ recognition.thumbnail }}" class="rounded" width="80" alt="{{ recognition.name }}">
+                    </a>
+                {% else %}
+                    <a href="/media/{{ recognition.image_id }}">View PDF</a>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

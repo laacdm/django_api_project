@@ -12,13 +12,13 @@ from django.shortcuts import render #, redirect
 # from rest_framework.authtoken.models import Token
 
 # ✅ Recognition View with Pagination and Sorting
-def recognition(request):
+def recognitions_page(request):
     # Define a custom sorting order for the 'type_of_document' field
     type_order = {'Alpha Tester, Top Contributor': 1, 'Alpha Tester, Participating Alpha Tester': 2, 'Participating Mentor': 3, 'Credly Badge': 4}
 
     # Fetch and sort records
     recognitionss = Recognition.objects.all()
-    sorted_recognitions = sorted(recognitionss, key=lambda r: (type_order.get(r.type_of_document, 4), -r.date.toordinal()))
+    sorted_recognitions = sorted(recognitionss, key=lambda r: (type_order.get(r.type_of_recognition, 4), -r.date.toordinal()))
 
     # Apply pagination to sorted records
     paginator = Paginator(sorted_recognitions, 10)  # ✅ Show 10 records per page
@@ -26,7 +26,7 @@ def recognition(request):
     page_obj = paginator.get_page(page_number)
 
     # ✅ Pass `page_obj` to template
-    return render(request, 'recognitions/home.html', {'page_obj': page_obj})
+    return render(request, 'recognitions/recognitions_page.html', {'page_obj': page_obj})
 
 
 # # ✅ User Registration View

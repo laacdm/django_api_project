@@ -1,0 +1,266 @@
+[
+    {
+        "model": "recognitions.recognition",
+        "pk": 1,
+        "fields": {
+            "name": "TensorFlow Advanced Techniques Specialization",
+            "type_of_recognition": "Alpha Tester, Top Contributor",
+            "institution": "DeepLearning.AI",
+            "date": "2021-03-01",
+            "image_id": "CERT0001.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 2,
+        "fields": {
+            "name": "Practical Data Science Specialization",
+            "type_of_recognition": "Alpha Tester, Participating Alpha Tester",
+            "institution": "DeepLearning.AI",
+            "date": "2021-06-01",
+            "image_id": "CERT0002.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 3,
+        "fields": {
+            "name": "Natural Language Processing Specialization",
+            "type_of_recognition": "Alpha Tester, Top Contributor",
+            "institution": "DeepLearning.AI",
+            "date": "2020-06-01",
+            "image_id": "CERT0003.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 4,
+        "fields": {
+            "name": "Machine Learning for Enginneering for Production Specialization",
+            "type_of_recognition": "Alpha Tester, Participating Alpha Tester",
+            "institution": "DeepLearning.AI",
+            "date": "2021-09-01",
+            "image_id": "CERT0004.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 5,
+        "fields": {
+            "name": "Unsupervised Learning, Recommenders, Reinforcement Learning",
+            "type_of_recognition": "Alpha Tester, Participating Alpha Tester",
+            "institution": "DeepLearning.AI",
+            "date": "2022-06-01",
+            "image_id": "CERT0005.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 6,
+        "fields": {
+            "name": "Machine Learning Specialization: Advanced Learning Algorithms",
+            "type_of_recognition": "Alpha Tester, Participating Alpha Tester",
+            "institution": "DeepLearning.AI",
+            "date": "2022-06-01",
+            "image_id": "CERT0006.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 7,
+        "fields": {
+            "name": "TensorFlow: Advanced Techniques Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2022-06-01",
+            "image_id": "CERT0007.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 8,
+        "fields": {
+            "name": "TensorFlow: Advanced Techniques Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2024-01-01",
+            "image_id": "CERT0008.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 9,
+        "fields": {
+            "name": "TensorFlow: Advanced Techniques Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2024-10-01",
+            "image_id": "CERT0009.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 10,
+        "fields": {
+            "name": "TensorFlow: Advanced Techniques Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2023-10-01",
+            "image_id": "CERT0010.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 11,
+        "fields": {
+            "name": "TensorFlow: Advanced Techniques Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2022-10-01",
+            "image_id": "CERT0011.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 12,
+        "fields": {
+            "name": "TensorFlow: Advanced Techniques Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2023-04-01",
+            "image_id": "CERT0012.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 13,
+        "fields": {
+            "name": "Machine Learning Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2024-04-01",
+            "image_id": "CERT0013.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 14,
+        "fields": {
+            "name": "Machine Learning Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2025-01-01",
+            "image_id": "CERT0014.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 15,
+        "fields": {
+            "name": "Machine Learning Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2024-01-01",
+            "image_id": "CERT0015.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 16,
+        "fields": {
+            "name": "Machine Learning Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2024-10-01",
+            "image_id": "CERT0016.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 17,
+        "fields": {
+            "name": "Machine Learning Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2025-01-01",
+            "image_id": "CERT0017.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 18,
+        "fields": {
+            "name": "Machine Learning Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2023-10-01",
+            "image_id": "CERT0018.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 19,
+        "fields": {
+            "name": "Machine Learning Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2022-10-01",
+            "image_id": "CERT0019.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 20,
+        "fields": {
+            "name": "Machine Learning Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2023-04-01",
+            "image_id": "CERT0020.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 21,
+        "fields": {
+            "name": "Machine Learning Specialization",
+            "type_of_recognition": "Participating Mentor",
+            "institution": "DeepLearning.AI",
+            "date": "2024-04-01",
+            "image_id": "CERT0021.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 23,
+        "fields": {
+            "name": "Advanced Data Science Specialization",
+            "type_of_recognition": "Credly Badge",
+            "institution": "IBM",
+            "date": "2021-02-01",
+            "image_id": "CERT0023.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 24,
+        "fields": {
+            "name": "Deep Learning Specialization",
+            "type_of_recognition": "Credly Badge",
+            "institution": "DeepLearning.AI",
+            "date": "2024-08-01",
+            "image_id": "CERT0024.pdf"
+        }
+    },
+    {
+        "model": "recognitions.recognition",
+        "pk": 25,
+        "fields": {
+            "name": "Community Guided Project Creator",
+            "type_of_recognition": "Credly Badge",
+            "institution": "Coursera",
+            "date": "2021-08-01",
+            "image_id": "CERT0025.pdf"
+        }
+    }
+]

@@ -19,13 +19,16 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from records.views import RecordViewSet, home, about, register, user_login, user_logout, get_api_key
+from recognitions.views import RecognitionViewSet
 
 router = DefaultRouter()
 router.register(r'records', RecordViewSet, basename='record')
+router.register(r'recognitions', RecognitionViewSet, basename='recognition')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),  # Register API routes
+    path('recognitions/', include('recognitions.urls')),  # ✅ Include recognitions app URLs
     path('', home, name='home'),
     path('about/', about, name='about'),  # ✅ Add About page URL
     path('register/', register, name='register'),

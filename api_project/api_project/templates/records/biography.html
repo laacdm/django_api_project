@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block title %}Biography - Luis' Web Site{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4"><i class="bi bi-person-circle biography-icon"></i> About Me</h2>
+
+<style>
+    /* Styling for the biography page */
+    .card {
+        margin-bottom: 20px;
+    }
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+    .biography-icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: #007bff;
+    }
+    .photo-link {
+        font-size: 1.1rem;
+        color: #007bff;
+        text-decoration: none;
+    }
+    .photo-link:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<!-- Biography Cards -->
+<div class="row">
+    <!-- Birthplace -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-geo-alt biography-icon"></i> Birthplace</h5>
+                <p class="card-text">I was born in Managua, Nicaragua.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- High School -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-book biography-icon"></i> High School</h5>
+                <p class="card-text">
+                    I attended high school at College Cardinal Mercier in Braine l’Alleud, Brussels region, Belgium.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- University Studies -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-mortarboard biography-icon"></i> University Studies</h5>
+                <p class="card-text">
+                    • I studied at the University of Moncton, Moncton, New Brunswick, Canada.<br>
+                    • I obtained a Master of Science in Economics at the University of Lausanne, Lausanne, Vaud, Switzerland.<br>
+                    • I earned a Master of Arts in Economics at Georgetown University, Washington, DC, USA.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-translate biography-icon"></i> Languages</h5>
+                <p class="card-text">
+                    I speak and write native **Spanish** and **French**, and I speak and write **English** at an advanced level.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hobbies -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-camera biography-icon"></i> Hobbies</h5>
+                <p class="card-text">
+                    I enjoy going to the beach and taking photographs. To see some of my photos, visit my
+                    <a href="https://500px.com/p/LuisAlbertoAlanizCastillo?view=photos" target="_blank" class="photo-link">
+                        500px profile <i class="bi bi-box-arrow-up-right"></i>
+                    </a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Family -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-house-heart biography-icon"></i> Family</h5>
+                <p class="card-text">
+                    I am married with two children, and we have two dogs as mascots.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

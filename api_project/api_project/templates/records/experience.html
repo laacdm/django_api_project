@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Experience - Luis' Web Site{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4"><i class="bi bi-briefcase experience-icon"></i> Professional Experience</h2>
+
+<style>
+    /* Styling for the experience page */
+    .card {
+        margin-bottom: 20px;
+    }
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+    .card-subtitle {
+        font-size: 1rem;
+        color: #6c757d;
+    }
+    .experience-icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: #007bff;
+    }
+</style>
+
+<!-- Experience Cards -->
+<div class="row">
+    <!-- DeepLearning.AI -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-mortarboard experience-icon"></i> DeepLearning.AI, Remote</h5>
+                <h6 class="card-subtitle mb-2">Mentor (05/2020 - Present)</h6>
+                <p class="card-text">
+                    • Provided quiz questions for Short Courses, Building Systems with the ChatGPT API and LangChain for LLM Application Development.<br>
+                    • Reviewed assignments in Practical Data Science, GANs, TensorFlow Advanced Techniques, and more.<br>
+                    • Mentored students and provided feedback on multiple AI courses.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Odysseus Data Services -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-bar-chart-line experience-icon"></i> Odysseus Data Services, Remote</h5>
+                <h6 class="card-subtitle mb-2">Data Scientist (10/2021 - 06/2024)</h6>
+                <p class="card-text">
+                    • Developed R-Shiny applications for data visualization.<br>
+                    • Engineered data pipelines for healthcare projects.<br>
+                    • Contributed to R packages and performed SQL transformations.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FUNIDES -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-globe experience-icon"></i> FUNIDES, Nicaragua</h5>
+                <h6 class="card-subtitle mb-2">Director of Economic Area (03/2007 - 02/2019)</h6>
+                <p class="card-text">
+                    • Conducted macroeconomic analysis and econometric modeling.<br>
+                    • Directed quarterly economic reviews for Nicaragua.<br>
+                    • Authored research papers and led survey design.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

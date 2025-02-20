@@ -3,7 +3,42 @@
 {% block title %}Course Curriculum - Luis' Web Site{% endblock %}
 
 {% block content %}
-<h2 class="text-center mb-4">Course Curriculum</h2>
+<h2 class="text-center mb-4"><i class="bi bi-mortarboard experience-icon"></i> Course Curriculum</h2>
+
+<style>
+    /* Column width customization */
+    .table th:nth-child(1), .table td:nth-child(1) { width: 16%; }  /* Name */
+    .table th:nth-child(2), .table td:nth-child(2) { width: 4%; }  /* Type */
+    .table th:nth-child(3), .table td:nth-child(3) { width: 11%; }  /* Institution */
+    .table th:nth-child(4), .table td:nth-child(4) { width: 4%; }  /* Specialization */
+    .table th:nth-child(5), .table td:nth-child(5) { width: 10%; }  /* Date */
+    .table th:nth-child(6), .table td:nth-child(6) { width: 8%; }  /* Paid */
+    .table th:nth-child(7), .table td:nth-child(7) { width: 11%; }  /* Provider */
+    .table th:nth-child(8), .table td:nth-child(8) { width: 28%; }  /* Description */
+    .table th:nth-child(9), .table td:nth-child(9) { min-width: 100px; } /* Image */
+
+    /* Font size adjustments */
+    .table th, .table td { font-size: 14px; }
+    .table td:nth-child(8) {
+        white-space: normal; /* Allows text to wrap */
+        word-wrap: break-word; /* Ensures long words wrap */
+        max-width: 300px; /* Optional: Prevents the column from becoming too wide */
+        text-align: center;
+    }
+    .table thead th {
+    text-align: center; /* Centers text in the header cells */
+    vertical-align: middle; /* Ensures alignment looks balanced */
+    }
+    .table td {
+    text-align: center;
+    }
+    .experience-icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: #007bff;
+    }
+</style>
+
 
 <!-- ✅ Responsive Table Wrapper -->
 <div class="table-responsive">
@@ -34,7 +69,7 @@
                 <td class="text-truncate" style="max-width: 150px;">{{ record.description }}</td>
                 <td class="thumbnail text-center">
                     {% if record.thumbnail %}
-                        <a href="/media/{{ record.image_id }}" target="_blank">
+                        <a href="/media/{{ record.image_id }}" target="_blank" data-bs-toggle="tooltip" title="Click to view full size">
                             <img src="/media/{{ record.thumbnail }}" class="rounded img-fluid" style="max-width: 80px;">
                         </a>
                     {% else %}
@@ -61,5 +96,15 @@
         {% endif %}
     </ul>
 </nav>
+
+<!-- ✅ Bootstrap Tooltip Activation -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+            new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    });
+</script>
 
 {% endblock %}

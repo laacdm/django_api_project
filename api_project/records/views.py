@@ -65,6 +65,12 @@ def user_logout(request):
 def about(request):
     return render(request, 'records/about.html')
 
+def experience(request):
+    return render(request, 'records/experience.html')
+
+def biography(request):
+    return render(request, 'records/biography.html')
+
 
 # ✅ View to Get API Key (Only for Logged-In Users)
 @login_required

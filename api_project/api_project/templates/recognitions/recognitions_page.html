@@ -3,7 +3,37 @@
 {% block title %}Recognitions - Luis' Web Site{% endblock %}
 
 {% block content %}
-<h2 class="text-center mb-4">Recognitions</h2>
+<h2 class="text-center mb-4"><i class="bi bi-award recognitions-icon"></i>Recognitions</h2>
+
+<style>
+    /* Column width customization */
+    .table th:nth-child(1), .table td:nth-child(1) { width: 23%; }  /* Name */
+    .table th:nth-child(2), .table td:nth-child(2) { width: 23%; }  /* Type */
+    .table th:nth-child(3), .table td:nth-child(3) { width: 23%; }  /* Institution */
+    .table th:nth-child(4), .table td:nth-child(4) { width: 23%; }  /* Date */
+    .table th:nth-child(5), .table td:nth-child(5) { min-width: 100px; } /* Image */
+
+    /* Font size adjustments */
+    .table th, .table td { font-size: 14px; }
+    .table td:nth-child(8) {
+        white-space: normal; /* Allows text to wrap */
+        word-wrap: break-word; /* Ensures long words wrap */
+        max-width: 300px; /* Optional: Prevents the column from becoming too wide */
+        text-align: center;
+    }
+    .table thead th {
+    text-align: center; /* Centers text in the header cells */
+    vertical-align: middle; /* Ensures alignment looks balanced */
+    }
+    .table td {
+    text-align: center;
+    }
+    .recognitions-icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: #007bff;
+    }
+</style>
 
 <table class="table table-hover table-bordered">
     <thead class="table-dark">
